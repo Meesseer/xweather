@@ -41,11 +41,11 @@ function App() {
             placeholder="Enter city name"
           />
           <button variant="contained" onClick={handleSubmit} disabled={loading}>
-            {loading ? <p>Loading data...</p> : 'Search'}
+             Search
           </button>
         </Box>
         <Box mt={2} className="weather-cards">
-          <Stack direction='row' spacing={2}>
+        {loading ? <p>Loading data...</p> : <Stack direction='row' spacing={2}>
             {weatherData && (
               <>
                 <Card className="weather-card" sx={{ minWidth: 275 }}>
@@ -94,6 +94,7 @@ function App() {
               </>
             )}
           </Stack>
+          }
         </Box>
       </Stack>
     </Box>
