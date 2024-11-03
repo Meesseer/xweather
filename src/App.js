@@ -41,7 +41,7 @@ function App() {
             placeholder="Enter city name"
           />
           <button variant="contained" onClick={handleSubmit} disabled={loading}>
-            {loading ? <p>Loading data…</p> : 'Search'}
+            {loading ? <p>Loading data...</p> : 'Search'}
           </button>
         </Box>
         <Box mt={2} className="weather-cards">
